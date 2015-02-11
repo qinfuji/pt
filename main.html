@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>pt</title>
+    <meta name="Keywords" content=""/>
+    <meta name="Description" content="pt 测试"/>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <link href="css/FA/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        $(function() {
+            initLayout();
+        });
+
+        function initLayout(){
+            var containH = $(window).height() - $('#pt-head').outerHeight() - $('#pt-toolbar').outerHeight() -$('#pt-footer').outerHeight();
+            $("#pt-maincontainer").height(containH);
+            var editorW = $("#pt-maincontainer").width() - $('#leftside').outerWidth() - $('#rightside').outerWidth() ;
+            $('#pt-editor').width(editorW);
+            var leftposition = $('#leftside').position();
+            var leftwidth = $('#leftside').width();
+            var rightposition = $('#rightside').position();
+            $('#pt-editor').css({"left" : (leftposition.left + leftwidth) , "right": rightposition.left , "height":containH})
+        }
+    </script>
+</head>
+<body>
+    <!--banner-->
+    <div class="pt-head" id="pt-head">
+        头部
+    </div>
+    <div class="pt-toolbar" id="pt-toolbar">
+        工具条
+    </div>
+    <div class="pt-maincontainer" id="pt-maincontainer">
+        <!--左侧-->
+        <div class="leftside" id="leftside">
+            <div class="pt-sidebar-s">
+                <div class="block"><div class="text">工具箱</div></div>
+                <div class="block"><div class="text">我在测试</div></div>
+                <div class="block"><div class="text">我在测试</div></div>
+            </div>
+            <div class="pt-sidebar">
+                <div class="title">工具箱 <i class="fa fa-close"></i></div>
+                <div class="search">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="搜索工具箱">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Go!</button>
+                      </span>
+                    </div>
+                </div>
+                <div class="toolsgroup">
+                    <div class="head"></div>
+                    <div class="list">
+                        <div class="item">AAAAA</div>
+                        <div class="item">BBBBB</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pt-editor" id="pt-editor"></div>
+
+        <div class="rightside" id="rightside">
+            <div id="pt-sidebar-s">
+                <div class="collapse"></div>
+            </div>
+            <div id="pt-sidebar">
+            </div>
+        </div>
+    </div>
+    <div class="pt-footer" id="pt-footer">
+        底部
+    </div>
+</body>
+</html>
