@@ -21,6 +21,7 @@
     <script>
         $(function() {
             initLayout();
+            siderBar();
         });
 
         function initLayout(){
@@ -33,6 +34,14 @@
             var rightposition = $('#rightside').position();
             $('#pt-editor').css({"left" : (leftposition.left + leftwidth) , "right": rightposition.left , "height":containH})
         }
+
+        function siderBar(){
+            //var pos = $('#leftside').position();
+            //$('#pt-editor').outerWidth();
+            //$("#pt-splitBarProxy").css({left:(pos.left + $('#leftside').outerWidth())});
+            //$("#pt-splitBar").css({left:(pos.left + $('#leftside').outerWidth())})
+        }
+
     </script>
 </head>
 <body>
@@ -46,12 +55,12 @@
     <div class="pt-maincontainer" id="pt-maincontainer">
         <!--左侧-->
         <div class="leftside" id="leftside">
-            <div class="pt-sidebar-s">
+            <div id="pt-sidebar-s">
                 <div class="block"><div class="text">工具箱</div></div>
                 <div class="block"><div class="text">我在测试</div></div>
                 <div class="block"><div class="text">我在测试</div></div>
             </div>
-            <div class="pt-sidebar">
+            <div id="pt-sidebar">
                 <div class="title">工具箱 <i class="fa fa-close"></i></div>
                 <div class="search">
                     <div class="input-group">
@@ -70,6 +79,8 @@
                 </div>
             </div>
         </div>
+        <div id="pt-splitBarProxy" style="height:100%;"></div>
+        <div id="pt-splitBar" style="height:100%;"></div>
         <div class="pt-editor" id="pt-editor"></div>
 
         <div class="rightside" id="rightside">

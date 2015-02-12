@@ -145,6 +145,9 @@ th[align=right]{text-align:right;}
 .table.nowrap td,
 .table.nowrap th{white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 
+.fix{zoom:1;}
+.fix:after{display:block; content:'clear'; clear:both; line-height:0; visibility:hidden;}
+
 /*头部*/
 .pt-head{
     height:20px;
@@ -169,55 +172,60 @@ th[align=right]{text-align:right;}
 .pt-maincontainer {
     background-color: #d9c9c9;
     width:100%;
+    position: relative;
 }
 
 
+.pt-maincontainer .leftside {
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+    height:100%;
+}
 
-.pt-maincontainer .leftside .pt-sidebar-s{
+.pt-maincontainer .leftside #pt-sidebar-s{
     height:100%;
     background-color: #293955;
-    width: 38px;
+    width: 37px;
     position: absolute;
     left:0;
-    padding-top: 10px;
+    padding-top: 0px;
 }
 
-.pt-maincontainer .leftside .pt-sidebar-s .block{
-     margin: 10px 0 0 0;
-     width: 34px;
+.pt-maincontainer .leftside #pt-sidebar-s .block{
+     margin: 11px 0 0 0px;
      line-height:24px;
      color: #fff;
      background-color: #43566F;
-     padding: 0 0 0 5px;
 }
 
-.pt-maincontainer .leftside .pt-sidebar-s .block .text{
+.pt-maincontainer .leftside #pt-sidebar-s .block .text{
     height: 100%;
     font-size: 14px;
-    margin: 0 3px;
+    margin: 0 0 0 7px;
     text-align: center;
     background-color: #293955;
-    width: 30px;
-    padding-left: 8px;
-    padding-right: 8px;
+    width: 29px;
     line-height: 16px;
+    padding-left: 2px;
 }
 
-.pt-maincontainer .leftside .pt-sidebar-s .block:hover{
+.pt-maincontainer .leftside #pt-sidebar-s .block:hover{
      cursor: pointer;
      background-color: #9BA7B7;
 }
 
-.pt-maincontainer .leftside .pt-sidebar{
+.pt-maincontainer .leftside #pt-sidebar{
     height:100%;
     background-color: #fff;
     width: 260px;
     position: absolute;
-    left: 38px;
-    border: 2px solid #293955;
+    left: 36px;
+    border: 1px solid #293955;
 }
 
-.pt-maincontainer .leftside .pt-sidebar .title{
+.pt-maincontainer .leftside #pt-sidebar .title{
     height: 28px;
     background-color: #FFF29D;
     width: 100%;
@@ -227,17 +235,44 @@ th[align=right]{text-align:right;}
     padding-left: 10px;
 }
 
-.pt-maincontainer .leftside .pt-sidebar .title i{
+.pt-maincontainer .leftside #pt-sidebar .title i{
     position: absolute;
     right:10px;
     margin-top: 5px;
 }
 
-.pt-maincontainer .leftside .pt-sidebar .search{
+.pt-maincontainer .leftside #pt-sidebar .search{
     border-bottom-width: 2px;
     
     border-bottom-style: solid;
     border-bottom-color: #CFD6E5;
+}
+
+.pt-maincontainer #pt-splitBarProxy{
+    position: absolute;
+    top: 0;
+    left: 294px;
+    z-index: 2;
+    display: none;
+    width: 3px;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 1px;
+    cursor: col-resize;
+    float: left;
+}
+
+.pt-maincontainer #pt-splitBar{
+    position: absolute;
+    top: 0;
+    left: 296px;
+    display: block;
+    width: 4px;
+    overflow: hidden;
+    cursor: col-resize;
+    float: left;
+    background-color: #293955;
+    z-index: 1;
 }
 
 .pt-maincontainer .rightside{
