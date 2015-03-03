@@ -184,26 +184,24 @@ th[align=right]{text-align:right;}
     height:100%;
 }
 
-.pt-maincontainer .leftside #pt-sidebar-s{
+.pt-maincontainer  #pt-sidebar-s{
     height:100%;
     background-color: #293955;
-    width: 37px;
+    width: 38px;
     position: absolute;
-    left:0;
     padding-top: 0px;
 }
 
-.pt-maincontainer .leftside #pt-sidebar-s .block{
+.pt-maincontainer  #pt-sidebar-s .block{
      margin: 11px 0 0 0px;
      line-height:24px;
      color: #fff;
      background-color: #43566F;
 }
 
-.pt-maincontainer .leftside #pt-sidebar-s .block .text{
+.pt-maincontainer  #pt-sidebar-s .block .text{
     height: 100%;
     font-size: 14px;
-    margin: 0 0 0 7px;
     text-align: center;
     background-color: #293955;
     width: 29px;
@@ -211,21 +209,21 @@ th[align=right]{text-align:right;}
     padding-left: 2px;
 }
 
-.pt-maincontainer .leftside #pt-sidebar-s .block:hover{
+.pt-maincontainer  #pt-sidebar-s .block:hover{
      cursor: pointer;
      background-color: #9BA7B7;
 }
 
-.pt-maincontainer .leftside #pt-sidebar{
+.pt-maincontainer  #pt-sidebar{
     height:100%;
     background-color: #fff;
     width: 260px;
     position: absolute;
-    left: 36px;
     border: 1px solid #293955;
 }
 
-.pt-maincontainer .leftside #pt-sidebar .title{
+
+.pt-maincontainer  #pt-sidebar .title{
     height: 28px;
     background-color: #FFF29D;
     width: 100%;
@@ -235,15 +233,14 @@ th[align=right]{text-align:right;}
     padding-left: 10px;
 }
 
-.pt-maincontainer .leftside #pt-sidebar .title i{
+.pt-maincontainer  #pt-sidebar .title i{
     position: absolute;
     right:10px;
     margin-top: 5px;
 }
 
-.pt-maincontainer .leftside #pt-sidebar .search{
+.pt-maincontainer  #pt-sidebar .search{
     border-bottom-width: 2px;
-    
     border-bottom-style: solid;
     border-bottom-color: #CFD6E5;
 }
@@ -278,9 +275,8 @@ th[align=right]{text-align:right;}
 .pt-maincontainer .rightside{
     height:100%;
     background-color: #A9c9c9;
-    width:60px;
     position: absolute;
-    right:0;
+    right: 295px;
 }
 
 .pt-maincontainer .pt-editor{
@@ -290,4 +286,28 @@ th[align=right]{text-align:right;}
     border: 1px solid red;
     left:60px;
     right:60px;
+}
+
+.pt-maincontainer .leftside #pt-sidebar{
+    left: 36px;
+}
+
+.pt-maincontainer .leftside #pt-sidebar-s{
+    left: 0px;
+}
+
+.pt-maincontainer .rightside #pt-sidebar{
+    left: 0px;
+}
+
+.pt-maincontainer .rightside #pt-sidebar-s{
+    right: -297px;
+}
+
+.pt-maincontainer .leftside #pt-sidebar-s .block .text{
+    margin: 0 0 0 7px;
+}
+
+.pt-maincontainer .rightside #pt-sidebar-s .block .text{
+    margin: 7px 0 0 0px;
 }
